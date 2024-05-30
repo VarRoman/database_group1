@@ -25,6 +25,8 @@ class UserModel(db.Model):
     password = db.Column(db.String(64))
     role_id = db.Column(db.Integer, db.ForeignKey('Role.id'), nullable=False)
 
+
+
     def to_dict(self):
         return {
             "id": self.id,
@@ -59,17 +61,22 @@ class User(Resource):
             return {'message': 'User with this email already exists'}, 400
         if existing_user_nick is not None:
             return {'message': 'User with this nickname already exists'}, 400
-        new_user = UserModel(
-            first_name=data.get('first_name'),
-            last_name=data.get('last_name'),
-            nick_name=data.get('nick_name'),
-            email=data.get('email'),
-            password=data.get('password'),
-            role_id=data.get('role_id')
-        )
-        db.session.add(new_user)
-        db.session.commit()
-        return {'message': 'User created successfully', 'user': new_user.to_dict()}, 201
+        try:
+            new_user = UserModel(
+                first_name=data.get('first_name'),
+                last_name=data.get('last_name'),
+                nick_name=data.get('nick_name'),
+                email=data.get('email'),
+                password=data.get('password'),
+                role_id=data.get('role_id')
+            )
+            db.session.add(new_user)
+            db.session.commit()
+            return {'message': 'User created successfully', 'user': new_user.to_dict()}, 201
+        except Exception as e:
+            # Handle database errors or unexpected exceptions
+            db.session.rollback()  # Rollback changes if an exception occurs
+            return {'message': f'An error occurred creating the user: {str(e)}'}, 500
 
     def put(self, user_id):
         user = UserModel.query.get(user_id)
