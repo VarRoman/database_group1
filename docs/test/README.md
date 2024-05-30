@@ -5,9 +5,9 @@
 
 ### Отримання інформації по всім User-ам
 
-<img src="./media/Users_1.jpg">
+<img src="./media/get_all.png">
 
-<img src="./media/Users_2.jpg">
+<img src="./media/get_one.png">
 
 ### Отримання інформації по id User-а
 
@@ -15,36 +15,20 @@
 
 ### Створення нового юзера
 
-<img src="./media/User_create.jpg">
+<img src="./media/post_user.png">
 
-### Вміст таблиці 'User' у базі 'quiz' даних після видалення юзеру
+### Помилка створення юзера по причині: "Така електронна пошта вже існує"
 
-<img src="./media/User_create_sql.jpg">
+<img src="./media/already_exists.png">
 
-### Помилка створення юзера по причині: "Пошта вже існує"
+### Видалення юзера
 
-<img src="./media/User_email.jpg">
-
-### Помилка створення юзера по причині: "Такий нікнейм вже існує"
-
-<img src="./media/User_nickname.jpg">
-
-### Видалення юзеру
-
-<img src="./media/User_delete.jpg">
-
-### Помилка видалення юзеру по причині: "Такого юзеру не знайдено"
-
-<img src="./media/User_delete_not_found.jpg">
-
-### Вміст таблиці 'User' у базі 'quiz' даних після видалення юзеру
-
-<img src="./media/User_delete_sql.jpg">
+<img src="./media/deleted_user.png">
 
 ### Оновлення юзеру
 
-<img src="./media/User_update.jpg">
+<img src="./media/changed_name.png">
 
 ### Вміст таблиці 'User' у базі 'quiz'  даних після виконання усіх операцій
 
-<img src="./media/Users_sql.jpg">
+<img src="./media/table_info.png">
