@@ -7,11 +7,9 @@
 
 <img src="./media/get_all.png">
 
-<img src="./media/get_one.png">
-
 ### Отримання інформації по id User-а
 
-<img src="./media/User_id.jpg">
+<img src="./media/get_one.png">
 
 ### Створення нового юзера
 
