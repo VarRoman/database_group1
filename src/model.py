@@ -4,10 +4,10 @@ class Users:
     def __init__(self):
         try:
             self.connection = psycopg2.connect(
-        dbname="rqrcbawj",
-        user="rqrcbawj",
-        password="qxbz00Bs_sMBCBTDgJb95B5kOEsrUohY",
-        host="balarama.db.elephantsql.com")
+        dbname="table",
+        user="MySQL84",
+        password="roman2360",
+        host="")
 
             print("Connection to database established successfully!")
             self.cursor = self.connection.cursor()
